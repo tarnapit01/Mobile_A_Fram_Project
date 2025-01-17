@@ -1,0 +1,23 @@
+/* Set scene background color */
+a-scene {
+    background-color: #000;
+  }
+  
+  /* Customize cursor */
+  a-cursor {
+    color: #fff;
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  
+  /* Interactive box hover effect */
+  #interactive-box:hover {
+    color: #00ff00;
+    cursor: pointer;
+  }
+  
