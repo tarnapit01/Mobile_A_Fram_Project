@@ -15,22 +15,40 @@
     <a-light type="ambient" color="#ffffff" intensity="0.8"></a-light>
     <a-light type="directional" color="#ffaa55" intensity="0.6" position="2 4 -2"></a-light>
 
-    <!-- Table -->
+    <!-- Table 1 -->
     <a-entity 
       gltf-model="assets/models/bar_table.glb" 
       position="0 0 -5" 
-      scale="0.05 0.05 0.05">
+      scale="0.05 0.05 0.05"></a-entity>
     </a-entity>
 
-    <!-- Drinks -->
     <a-entity 
       gltf-model="assets/models/candlestick.glb" 
-      position="0.2 1.2 -3" 
+      position="0.4 0.9 -4.93" 
       scale="0.01 0.01 0.01">
     </a-entity>
     <a-entity 
       gltf-model="assets/models/sake_gourd_alcohol_container.glb" 
-      position="-0.2 1.2 -5" 
+      position="-0.2 1.13 -5" 
+      scale="0.2 0.2 0.2">
+    </a-entity>
+    
+    <!-- Table 2 -->
+    <a-entity 
+    gltf-model="assets/models/bar_table.glb" 
+    position="10 0 -5" 
+    scale="0.05 0.05 0.05">
+  </a-entity>
+
+  <a-entity 
+      gltf-model="assets/models/candlestick.glb" 
+      position="10.5 0.9 -4.5" 
+      scale="0.01 0.01 0.01">
+    </a-entity>
+
+    <a-entity 
+      gltf-model="assets/models/sake_gourd_alcohol_container.glb" 
+      position="10 1.13 -5" 
       scale="0.2 0.2 0.2">
     </a-entity>
     
@@ -44,14 +62,35 @@
         rotation="0 -15 0">
     </a-entity>
 
+    <a-entity 
+        gltf-model="assets/models/girl_sitting_on_something.glb" 
+        position="13 -2.5 -4.5" 
+        scale="4 4 4" 
+        rotation="0 -15 0">
+    </a-entity>
+
     <!-- Customer dancing -->
     <a-entity 
         gltf-model="assets/models/gina_dancing.glb" 
         position="-2 -1.7 -4.5" 
         scale="0.027 0.027 0.027" 
         rotation="0 -15 0" 
-        animation-mixer="clip: mixamo.com; loop: repeat; clampWhenFinished: false">
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 2000">
+    </a-entity>
+
+    <a-entity 
+        gltf-model="assets/models/woman_in_bodysuit_posing_233.glb" 
+        position="7 -1.7 -4.5" 
+        scale="0.027 0.027 0.027" 
+        rotation="0 -15 0" >   
+    </a-entity>
+
+
+
+    
+        
   </a-entity>
+
   
   
 
@@ -59,15 +98,7 @@
 
    
 
-    <!-- Camera -->
-    <a-entity 
-      id="camera" 
-      camera 
-      position="0 1.6 0" 
-      look-controls 
-      wasd-controls="acceleration: 10">
-      <a-cursor color="#FFFFFF"></a-cursor>
-    </a-entity>
+   
   </a-scene>
 </body>
 </html>
