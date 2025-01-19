@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A-Frame Door Example</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    <script src="js/event.js"></script>
+    <!-- <script src="./fbxLoading.js"></script> -->
+    <script src="js/movement-bounds.js"></script>
+    <script src="js/drinkable.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <script>
+        // Call the function to generate objects
+        generateFloor(
+          "a-scene", // Scene selector
+          "assets/models/Floor Dirt Small.glb", // Path to the 3D model
+          2, // Starting Z position
+          -15, // Ending Z position
+          -1, // Step for Z
+          5 // Max X value (range: -5 to 5)
+        );
+      </script>
+      <!--พุ้มไม้ซ้าย-->
+      <a-entity
+        gltf-model="assets/models/Shrub.glb"
+        scale="0.5 0.5 0.5"
+        position="-5 -0.25 3"
+      ></a-entity>
+      <a-entity
+        gltf-model="assets/models/Shrub.glb"
+        scale="0.5 0.5 0.5"
+        position="-5 -0.25 1"
+      ></a-entity>
+      <a-entity
+        gltf-model="assets/models/Shrub.glb"
+        scale="0.5 0.5 0.5"
+        position="-5 -0.25 -1"
+      ></a-entity>
+      <a-entity
+        gltf-model="assets/models/Shrub.glb"
+        scale="0.5 0.5 0.5"
+        position="-5 -0.25 -3"
+      ></a-entity>
+      <a-entity
+        gltf-model="assets/models/Shrub.glb"
+        scale="0.5 0.5 0.5"
+        position="-5 -0.25 -5"
+      ></a-entity>
+      <a-entity
+        gltf-model="assets/models/Shrub.glb"
+        scale="0.5 0.5 0.5"
+        position="-5 -0.25 -7"
+      ></a-entity>
+      <a-entity
+        gltf-model="assets/models/Shrub.glb"
+        scale="0.5 0.5 0.5"
+        position="-5 -0.25 -9"
+      ></a-entity>
+      <a-entity
+        gltf-model="assets/models/Shrub.glb"
+        scale="0.5 0.5 0.5"
+        position="-5 -0.25 -11"
+      ></a-entity>
+      <a-entity
+        gltf-model="assets/models/Shrub.glb"
+        scale="0.5 0.5 0.5"
+        position="-5 -0.25 -13"
+      ></a-entity>
+
+      <!--พุ้มไม้ขวา-->
+      <a-entity
+        gltf-model="assets/models/Shrub.glb"
+        scale="0.5 0.5 0.5"
+        position="5 -0.25 3"
+      ></a-entity>
+      <a-entity
+        gltf-model="assets/models/Shrub.glb"
+        scale="0.5 0.5 0.5"
+        position="5 -0.25 1"
+      ></a-entity>
+      <a-entity
+        gltf-model="assets/models/Shrub.glb"
+        scale="0.5 0.5 0.5"
+        position="5 -0.25 -1"
+      ></a-entity>
+      <a-entity
+        gltf-model="assets/models/Shrub.glb"
+        scale="0.5 0.5 0.5"
+        position="5 -0.25 -3"
+      ></a-entity>
+      <a-entity
+        gltf-model="assets/models/Shrub.glb"
+        scale="0.5 0.5 0.5"
+        position="5 -0.25 -5"
+      ></a-entity>
+      <a-entity
+        gltf-model="assets/models/Shrub.glb"
+        scale="0.5 0.5 0.5"
+        position="5 -0.25 -7"
+      ></a-entity>
+      <a-entity
+        gltf-model="assets/models/Shrub.glb"
+        scale="0.5 0.5 0.5"
+        position="5 -0.25 -9"
+      ></a-entity>
+      <a-entity
+        gltf-model="assets/models/Shrub.glb"
+        scale="0.5 0.5 0.5"
+        position="5 -0.25 -11"
+      ></a-entity>
+      <a-entity
+        gltf-model="assets/models/Shrub.glb"
+        scale="0.5 0.5 0.5"
+        position="5 -0.25 -13"
+      ></a-entity>
+
+      <!-- Bar -->
+      <a-entity
+        gltf-model="assets/models/Bar.glb"
+        scale="0.03 0.04 0.02"
+        position="0 1.12 -13"
+        rotation="0 180 0"
+      ></a-entity>
+
+      <!-- Door-->
+      <a-entity>
+        <a-plane
+          id="door"
+          position="-1.639 1 -10.33"
+          rotation="0 0 0"
+          width="2.251"
+          height="3.2"
+          color="#4d586c"
+          event-set__enter="_event: mouseenter; color: #848c9c"
+          event-set__leave="_event: mouseleave; color: #4d586c"
+        ></a-plane>
+      </a-entity>
+
+      <!-- Phone Station-->
+       <a-entity
+       gltf-model="assets/models/phonestation.glb"
+        scale="0.6 0.75 0.5"
+        position="3 0 -9"
+        rotation="0 0 0"
+       ></a-entity>
+
+       
+
+      <a-camera position="0 2 0" movement-bounds="minX: -4; maxX: 4; minZ: -10; maxZ: 2; minY: 1; maxY: 3"> 
+        <a-cursor></a-cursor>
+      </a-camera>
+
+
+      <script>
+        // เลือกประตูจาก ID
+        const door = document.querySelector("#door");
+        // ตรวจสอบว่าพบประตูหรือไม่
+        if (door) {
+          door.addEventListener("click", function () {
+            // เมื่อคลิกให้เปลี่ยนหน้า
+            window.location.href = "In_Bar.html"; // แทนที่ "other-page.html" ด้วยชื่อไฟล์ของคุณ
+            
+          });
+        } else {
+          console.error("Door element not found!");
+        }
+      </script>
+      
+      
+  </body>
+</html>
